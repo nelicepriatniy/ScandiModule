@@ -1,11 +1,819 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
+
+    <header>
+        <div class="container">
+            <div class="headerLeft">
+                <img src="./media/icons/logo.svg" alt="" class="headerLogo">
+                <nav class="headerMenuList desk">
+                    <li class="headerMenuListItem scrollbtn" data-b=".tehRabots">Главная</li>
+                    <li class="headerMenuListItem scrollbtn" data-b=".tehRabots">О нас</li>
+                    <li class="headerMenuListItem scrollbtn" data-b=".tehRabots">Проекты</li>
+                    <li class="headerMenuListItem scrollbtn" data-b=".tehRabots">Отзывы</li>
+                    <li class="headerMenuListItem scrollbtn" data-b=".tehRabots">Калькулятор ипотеки</li>
+                </nav>
+            </div>
+            <div class="headerRight">
+                <div class="headerContacts desk">
+                    <p class="headerContactsPhone">+7 (812) 777-77-77</p>
+                    <p class="headerContacTime"> Работаем с 10:00-20:00</p>
+                </div>
+                <div class="headerSeti">
+                    <a href="" class="headerSetiHref">
+                        <svg class="headerSetiHrefSvg" viewBox="0 0 34 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M30.0281 0.383275C30.44 0.209927 30.8908 0.15014 31.3336 0.210137C31.7764 0.270134 32.1951 0.447722 32.546 0.724417C32.8969 1.00111 33.1672 1.3668 33.3288 1.78341C33.4904 2.20003 33.5373 2.65234 33.4648 3.09328L29.6848 26.0216C29.3181 28.2333 26.8915 29.5016 24.8631 28.3999C23.1665 27.4783 20.6465 26.0583 18.3798 24.5766C17.2465 23.8349 13.7748 21.4599 14.2015 19.7699C14.5681 18.3249 20.4015 12.8949 23.7348 9.66661C25.0431 8.39828 24.4465 7.66661 22.9015 8.83328C19.0648 11.7299 12.9048 16.1349 10.8681 17.3749C9.07148 18.4683 8.13481 18.6549 7.01481 18.4683C4.97148 18.1283 3.07648 17.6016 1.52981 16.9599C-0.560187 16.0933 -0.45852 13.2199 1.52815 12.3833L30.0281 0.383275Z"
+                                fill="#FF8C42" />
+                        </svg>
+                    </a>
+                    <a href="" class="headerSetiHref">
+                        <svg class="headerSetiHrefSvg"  viewBox="0 0 42 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M40.9779 1.69531C41.2659 0.71875 40.9779 0 39.5923 0H35.0071C33.8395 0 33.3023 0.617187 33.0143 1.30469C33.0143 1.30469 30.6789 7.01562 27.3783 10.7187C26.3118 11.7891 25.8214 12.1328 25.2375 12.1328C24.9495 12.1328 24.5058 11.7891 24.5058 10.8125V1.69531C24.5058 0.523437 24.1788 0 23.2135 0H16.005C15.2733 0 14.8374 0.546875 14.8374 1.05469C14.8374 2.16406 16.4877 2.42188 16.6589 5.54688V12.3281C16.6589 13.8125 16.3943 14.0859 15.8104 14.0859C14.2535 14.0859 10.4702 8.35156 8.22828 1.78906C7.77677 0.515625 7.33305 0 6.15758 0H1.57248C0.264675 0 0 0.617187 0 1.30469C0 2.52344 1.55691 8.57813 7.24742 16.5781C11.0385 22.0391 16.3787 25 21.2363 25C24.1555 25 24.5136 24.3438 24.5136 23.2109C24.5136 17.9922 24.2489 17.5 25.7124 17.5C26.3896 17.5 27.5573 17.8438 30.2819 20.4766C33.3957 23.6016 33.9095 25 35.6533 25H40.2384C41.5462 25 42.2079 24.3438 41.8264 23.0469C40.9546 20.3203 35.0616 14.7109 34.797 14.3359C34.1197 13.4609 34.3143 13.0703 34.797 12.2891C34.8047 12.2813 40.4018 4.375 40.9779 1.69531Z"
+                                fill="#A6A6A6" />
+                        </svg>
+                    </a>
+                    <a href="" class="headerSetiHref">
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18.8556 0C20.7306 0.005 21.6822 0.015 22.5039 0.0383333L22.8272 0.05C23.2006 0.0633333 23.5689 0.0799999 24.0139 0.0999999C25.7872 0.183333 26.9972 0.463334 28.0589 0.875C29.1589 1.29833 30.0856 1.87167 31.0122 2.79667C31.8597 3.62983 32.5155 4.63765 32.9339 5.75C33.3456 6.81167 33.6256 8.02167 33.7089 9.79667C33.7289 10.24 33.7456 10.6083 33.7589 10.9833L33.7689 11.3067C33.7939 12.1267 33.8039 13.0783 33.8072 14.9533L33.8089 16.1967V18.38C33.813 19.5957 33.8002 20.8113 33.7706 22.0267L33.7606 22.35C33.7472 22.725 33.7306 23.0933 33.7106 23.5367C33.6272 25.3117 33.3439 26.52 32.9339 27.5833C32.5167 28.6963 31.8608 29.7044 31.0122 30.5367C30.1788 31.3839 29.1711 32.0396 28.0589 32.4583C26.9972 32.87 25.7872 33.15 24.0139 33.2333C23.6184 33.252 23.2229 33.2686 22.8272 33.2833L22.5039 33.2933C21.6822 33.3167 20.7306 33.3283 18.8556 33.3317L17.6122 33.3333H15.4306C14.2143 33.3375 12.9981 33.3248 11.7822 33.295L11.4589 33.285C11.0633 33.27 10.6677 33.2528 10.2722 33.2333C8.4989 33.15 7.2889 32.87 6.22557 32.4583C5.11335 32.0406 4.10593 31.3847 3.2739 30.5367C2.42565 29.7038 1.76928 28.6959 1.35057 27.5833C0.938905 26.5217 0.658904 25.3117 0.575571 23.5367C0.557002 23.1412 0.540335 22.7456 0.525571 22.35L0.517238 22.0267C0.486525 20.8114 0.472634 19.5957 0.475571 18.38V14.9533C0.470919 13.7377 0.483143 12.522 0.512238 11.3067L0.523904 10.9833C0.537238 10.6083 0.553904 10.24 0.573904 9.79667C0.657238 8.02167 0.937238 6.81333 1.3489 5.75C1.76743 4.63651 2.42511 3.62837 3.27557 2.79667C4.10739 1.94912 5.11414 1.29331 6.22557 0.875C7.2889 0.463334 8.49724 0.183333 10.2722 0.0999999C10.7156 0.0799999 11.0856 0.0633333 11.4589 0.05L11.7822 0.0399999C12.9976 0.0103878 14.2132 -0.00239116 15.4289 0.00166655L18.8556 0ZM17.1422 8.33333C14.9321 8.33333 12.8125 9.21131 11.2497 10.7741C9.68688 12.3369 8.8089 14.4565 8.8089 16.6667C8.8089 18.8768 9.68688 20.9964 11.2497 22.5592C12.8125 24.122 14.9321 25 17.1422 25C19.3524 25 21.472 24.122 23.0348 22.5592C24.5976 20.9964 25.4756 18.8768 25.4756 16.6667C25.4756 14.4565 24.5976 12.3369 23.0348 10.7741C21.472 9.21131 19.3524 8.33333 17.1422 8.33333ZM17.1422 11.6667C17.7988 11.6666 18.449 11.7958 19.0557 12.047C19.6624 12.2981 20.2136 12.6663 20.678 13.1305C21.1424 13.5948 21.5108 14.1459 21.7622 14.7525C22.0135 15.3591 22.143 16.0092 22.1431 16.6658C22.1432 17.3224 22.014 17.9726 21.7628 18.5793C21.5116 19.186 21.1434 19.7372 20.6792 20.2016C20.215 20.666 19.6638 21.0344 19.0573 21.2857C18.4507 21.5371 17.8005 21.6666 17.1439 21.6667C15.8178 21.6667 14.5461 21.1399 13.6084 20.2022C12.6707 19.2645 12.1439 17.9927 12.1439 16.6667C12.1439 15.3406 12.6707 14.0688 13.6084 13.1311C14.5461 12.1935 15.8178 11.6667 17.1439 11.6667M25.8939 5.83333C25.3414 5.83333 24.8115 6.05283 24.4208 6.44353C24.0301 6.83423 23.8106 7.36413 23.8106 7.91667C23.8106 8.4692 24.0301 8.99911 24.4208 9.38981C24.8115 9.78051 25.3414 10 25.8939 10C26.4464 10 26.9763 9.78051 27.367 9.38981C27.7577 8.99911 27.9772 8.4692 27.9772 7.91667C27.9772 7.36413 27.7577 6.83423 27.367 6.44353C26.9763 6.05283 26.4464 5.83333 25.8939 5.83333Z"
+                                fill="#A6A6A6" />
+                        </svg>
+                    </a>
+                </div>
+                <button class="headerButton desk scrollbtn" data-b=".tehRabots">оставить заявку</button>
+                <img src="./media/icons/mobMebu.svg" alt="" class="mob mobMenuOpen scrollbtn" data-b=".tehRabots">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="frontPage">
+            <div class="container">
+                <div class="frontInfo">
+                    <h3 class="frontHeading">Комфорт. Надежность. Стиль</h3>
+                    <h1 class="frontSubTitle">Возводим модульные дома с отделкой всего за 90 дней!</h1>
+                    <button class="orangeBtn scrollbtn" data-b=".tehRabots">Посмотреть проекты</button>
+                </div>
+            </div>
+            <img src="./media/main/notBg.png" alt="" class="fronImg">
+            <img src="./media/main/bg.png" alt="" class="frontBg">
+        </section>
+        <section class="discount">
+            <div class="container">
+                <p class="discountHeading">Акции </p>
+                <p class="discountSubTitle">Мы любим и ценим наших клиентов,
+                    поэтому эти предложения только для вас!</p>
+                    <div class="discountWraper">
+                        <div class="discountItem">
+                            <div class="discountItemTop">
+                                <p class="discountItemTopWid">вид акции</p>
+                                <p class="discountItemTopDate">до 25.10</p>
+                            </div>
+                            <div class="discountInfo">
+                                <p class="discountItemHeading">Название акции</p>
+                                <p class="discountItemText">эта акция включает в себя это, вот это, а еще вот то, вы получите все!</p>
+                                <button class="discountItemButton">кнопка действия</button>
+                            </div>
+                        </div>
+                        <div class="discountItem">
+                            <div class="discountItemTop">
+                                <p class="discountItemTopWid">вид акции</p>
+                                <p class="discountItemTopDate">до 25.10</p>
+                            </div>
+                            <div class="discountInfo">
+                                <p class="discountItemHeading">Название акции</p>
+                                <p class="discountItemText">эта акция включает в себя это, вот это, а еще вот то, вы получите все!</p>
+                                <button class="discountItemButton">кнопка действия</button>
+                            </div>
+                        </div>
+                        <div class="discountItem">
+                            <div class="discountItemTop">
+                                <p class="discountItemTopWid">вид акции</p>
+                                <p class="discountItemTopDate">до 25.10</p>
+                            </div>
+                            <div class="discountInfo">
+                                <p class="discountItemHeading">Название акции</p>
+                                <p class="discountItemText">эта акция включает в себя это, вот это, а еще вот то, вы получите все!</p>
+                                <button class="discountItemButton">кнопка действия</button>
+                            </div>
+                        </div>
+                        <div class="discountItem">
+                            <div class="discountItemTop">
+                                <p class="discountItemTopWid">вид акции</p>
+                                <p class="discountItemTopDate">до 25.10</p>
+                            </div>
+                            <div class="discountInfo">
+                                <p class="discountItemHeading">Название акции</p>
+                                <p class="discountItemText">эта акция включает в себя это, вот это, а еще вот то, вы получите все!</p>
+                                <button class="discountItemButton">кнопка действия</button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <img src="./media/paterns/discount.svg" alt="" class="discountBg">
+        </section>
+        <section class="aboutUs">
+            <div class="container">
+                <div class="aboutUsLeft">
+                    <h3 class="aboutUsHeading">О компании</h3>
+                    <h2 class="aboutUsText">Мы специализируемся на проектировании и строительстве экологичных модульных домов высокого качества. Благодаря использованию современных технологий и материалов, мы предлагаем энерго-эффективные и комфортные дома по доступным ценам. Выбирая нашу компанию, клиенты получают надежность, стиль
+                        и уют в одном решении.</h2>
+                </div>
+                <div class="aboutUsRight">
+                    <div class="aboutUsItem grayItem">
+                        <p class="aboutUsItemHeading">10 лет</p>
+                        <p class="aboutUsItemText">гарантии на ваш дом</p>
+                    </div>
+                    <div class="aboutUsItem darkGrayItem">
+                        <div class="aboutItemInfo">
+                            <p class="aboutUsItemHeading">25 лет!</p>
+                            <p class="aboutUsItemText">средний срок службы модульного дома</p>
+                        </div>
+                        <div class="aboutUsForm">
+                            <p class="aboutUsFormHeading">Оставьте заявку на строительство уникального модульного дома!</p>
+                            <div class="aboutUsFormWraper">
+                                <div class="aboutUsFormTop">
+                                    <div class="aboutUsFormInputs">
+                                        <div class="inputItem">
+                                            <label for="aboutName" class="aboutUsFormLabel">Укажите ваше ФИО</label>
+                                            <input type="text" class="aboutIsFormlabelInput" placeholder="Иванов Иван Иванович" id="aboutName">
+                                        </div>
+                                        <div class="inputItem">
+                                            <label for="aboutPhone" class="aboutUsFormLabel">Укажите ваш номер телефона</label>
+                                            <input type="text" class="aboutIsFormlabelInput" placeholder="+7 (    ) ___ __-__ " id="aboutPhone">
+                                        </div>
+                                    </div>
+                                    <div class="aboutUsFormSend">
+                                        <button class="aboutUsFormSendBtn">Отправить заявку</button>
+                                    </div>
+                                </div>
+                                <p class="aboutUsFormBtn">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования Платформой</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aboutUsItem orangeItem">
+                        <p class="aboutUsItemHeading">В срок</p>
+                        <p class="aboutUsItemText">сдадим вам готовый дом</p>
+                    </div>
+                </div>
+            </div>
+            <img src="./media/paterns/aboutUs.svg" alt="" class="aboutUsBg">
+        </section>
+        <section class="pluss">
+            <div class="container">
+                <p class="plussHeading">Ваши преимущества сотрудничества с нами</p>
+                <div class="plussWraper">
+                    <div class="plussItem">
+                        <img src="./media/pluss/1.svg" alt="" class="plussItemImg">
+                        <div class="plussItemInfo">
+                            <p class="plussItemHeading">Скорость</p>
+                            <p class="plussItemText">Разнообразный и богатый опыт говорит нам</p>
+                        </div>
+                    </div>
+                    <div class="plussItem">
+                        <img src="./media/pluss/1.svg" alt="" class="plussItemImg">
+                        <div class="plussItemInfo">
+                            <p class="plussItemHeading">Скорость</p>
+                            <p class="plussItemText">Разнообразный и богатый опыт говорит нам</p>
+                        </div>
+                    </div>
+                    <div class="plussItem">
+                        <img src="./media/pluss/1.svg" alt="" class="plussItemImg">
+                        <div class="plussItemInfo">
+                            <p class="plussItemHeading">Скорость</p>
+                            <p class="plussItemText">Разнообразный и богатый опыт говорит нам</p>
+                        </div>
+                    </div>
+                    <div class="plussItem">
+                        <img src="./media/pluss/1.svg" alt="" class="plussItemImg">
+                        <div class="plussItemInfo">
+                            <p class="plussItemHeading">Скорость</p>
+                            <p class="plussItemText">Разнообразный и богатый опыт говорит нам</p>
+                        </div>
+                    </div>
+                    <div class="plussItem">
+                        <img src="./media/pluss/1.svg" alt="" class="plussItemImg">
+                        <div class="plussItemInfo">
+                            <p class="plussItemHeading">Скорость</p>
+                            <p class="plussItemText">Разнообразный и богатый опыт говорит нам</p>
+                        </div>
+                    </div>
+                    <div class="plussItem">
+                        <img src="./media/pluss/1.svg" alt="" class="plussItemImg">
+                        <div class="plussItemInfo">
+                            <p class="plussItemHeading">Скорость</p>
+                            <p class="plussItemText">Разнообразный и богатый опыт говорит нам</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="./media/pluss/bg.png" alt="" class="plussBg">
+        </section>
+        <section class="selectHouse">
+            <div class="container">
+                <div class="selectHouseTop">
+                    <p class="selectHoustHeading">Выберите ваш будущий дом</p>
+                    <svg class="selectHouseTopSvg" viewBox="0 0 101 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3.1995 34.1567C-0.85907 31.8817 -0.896065 26.0531 3.1333 23.7268L6.57039 21.7424C8.40326 20.6842 10.6581 20.6699 12.5042 21.7047L61.4606 49.1472C65.5192 51.4222 65.5562 57.2508 61.5268 59.5771L58.0897 61.5615C56.2569 62.6197 54.0021 62.6341 52.1559 61.5992L3.1995 34.1567Z"
+                            fill="#FF8C42" />
+                        <path
+                            d="M21.2305 23.7466C17.1719 21.4715 17.1349 15.643 21.1643 13.3166L24.6014 11.3322C26.4342 10.274 28.689 10.2597 30.5352 11.2945L79.4916 38.737C83.5502 41.012 83.5872 46.8406 79.5578 49.167L76.1207 51.1514C74.2878 52.2096 72.033 52.2239 70.1869 51.189L21.2305 23.7466Z"
+                            fill="#FF8C42" />
+                        <path
+                            d="M39.2614 13.3364C35.2028 11.0614 35.1658 5.23277 39.1952 2.90642L42.6323 0.922012C44.4652 -0.136192 46.72 -0.150502 48.5661 0.884352L97.5225 28.3268C101.581 30.6018 101.618 36.4304 97.5887 38.7568L94.1516 40.7412C92.3188 41.7994 90.064 41.8137 88.2178 40.7788L39.2614 13.3364Z"
+                            fill="#FF8C42" />
+                    </svg>
+                </div>
+                <div class="selectHouseWraper">
+                    <div class="selectHouseItem">
+                        <img src="./media/selectHouse/1.png" alt="" class="selectHouseItemImg">
+                        <div class="selectHouseItemInfo">
+                            <p class="selectHouseItemName">Scandi Nord 26</p>
+                            <div class="selectHouseItemBtnInfo">
+                                <p class="selectHouseItemPrice">от 1.590.000</p>
+                                <button class="selectHouseMoreInfo">Подробнее</button>
+                                <button class="selectHouseZakaz">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="selectHouseItem">
+                        <img src="./media/selectHouse/1.png" alt="" class="selectHouseItemImg">
+                        <div class="selectHouseItemInfo">
+                            <p class="selectHouseItemName">Scandi Nord 26</p>
+                            <div class="selectHouseItemBtnInfo">
+                                <p class="selectHouseItemPrice">от 1.590.000</p>
+                                <button class="selectHouseMoreInfo">Подробнее</button>
+                                <button class="selectHouseZakaz">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="selectHouseItem">
+                        <img src="./media/selectHouse/1.png" alt="" class="selectHouseItemImg">
+                        <div class="selectHouseItemInfo">
+                            <p class="selectHouseItemName">Scandi Nord 26</p>
+                            <div class="selectHouseItemBtnInfo">
+                                <p class="selectHouseItemPrice">от 1.590.000</p>
+                                <button class="selectHouseMoreInfo">Подробнее</button>
+                                <button class="selectHouseZakaz">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="selectHouseForm">
+                        <p class="selectHouseFornHeading">Не нашли нужного вам дома?</p>
+                        <p class="selectHouseSubTitle">Оставьте заявку и мы построим вам дом по индивидуальному проекту</p>
+                        <div class="selectHouseFormWraper">
+                            <div class="selectHouseFormItSeklf">
+                                <label class="selectHouseLabel">
+                                    <p class="selectHouseLabelText">Укажите ваше ФИО</p>
+                                    <input type="text" class="selectHouseFormInput" placeholder="Иванов Иван Иванович">
+                                </label>
+                                <label class="selectHouseLabel">
+                                    <p class="selectHouseLabelText">Укажите ваш номер телефона</p>
+                                    <input type="text" class="selectHouseFormInput" placeholder="+7 (    ) ___ __-__ ">
+                                </label>
+                                <label class="selectHouseLabel">
+                                    <p class="selectHouseLabelText">Напишите комментарий к заказу</p>
+                                    <textarea class="selectHouseFormInput selectHouseTextArea"></textarea>
+                                </label>
+                            </div>
+                            <div class="selectHouseRight">
+                                <img src="./media/teh/bg.svg" alt="" class="selectHouseFormImg">
+                                <div class="selectHouseSendBlock">
+                                    <button class="orangeBtn selectHouseFormSend">Отправить заявку</button>
+                                    <p class="selectHouseFormPolicy">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования Платформой</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery">
+            <div class="container">
+                <p class="galleryHeading">Галерея</p>
+                <div class="swiper gallerySlider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide gallerySlide"><img src="./media/gallery/1.png" alt=""></div>
+                        <div class="swiper-slide gallerySlide"><img src="./media/gallery/2.png" alt=""></div>
+                        <div class="swiper-slide gallerySlide"><img src="./media/gallery/3.png" alt=""></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="proizvodstvo">
+            <div class="container">
+                <p class="proizvodHeading">Наше производство</p>
+                <p class="proizvodText">Каркасно-модульные дома создаются на нашем предприятии и транспортируются на участок заказчика в виде отдельных элементов.</p>
+                <ul class="proizvList">
+                    <li class="proizvListItem"> <span>Собственное производство с новейшим оборудованием</span> обеспечивает контроль качества на всех этапах и использование только экологичных и надежных материалов.</li>
+                    <li class="proizvListItem"> <span>Индивидуальный подход:</span> после получения запроса, наш специалист согласует с вами удобное время для посещения производства.</li>
+                    <li class="proizvListItem">Нашей целью является создание комфортного, стильного и долговечного дома <span>для вашей семьи.</span></li>
+                </ul>
+                <p class="proizvDop">Посетите наше производство и убедитесь в этом сами! Оставьте запрос на нашем сайте, и наш менеджер согласует с вами дату и время экскурсии.</p>
+                <button class="orangeBtn proizvBtn">Посмотреть производство</button>
+            </div>
+            <img src="./media/proizvodstvo/bg.png" alt="" class="proizvodstvoBg">
+            <svg class="proizvodstvoSvg" viewBox="0 0 513 519" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd"
+                    d="M127.844 519C41.6554 519 -19.8034 435.832 5.90446 353.987L117.093 0H349.957C400.532 0 446.346 29.6827 466.798 75.7013L513 179.654V391.898C513 462.095 455.802 519 385.245 519H127.844ZM454.446 208.781V391.898C454.446 429.921 423.464 460.745 385.245 460.745H265.449L200.842 208.781H454.446ZM185.905 150.526H436.031L413.246 99.26C402.167 74.3333 377.352 58.2551 349.957 58.2551H162.246L185.905 150.526ZM128.03 160.489L61.7933 371.363C47.8683 415.695 81.1583 460.745 127.844 460.745H205.019L128.03 160.489Z"
+                    fill="#A6A6A6" />
+            </svg>
+                
+        </section>
+        <section class="howWeWork">
+            <div class="container">
+                <div class="howWorkHEading">Как мы работаем?</div>
+                <div class="howWorkWraper">
+                    <div class="howWorkItem">
+                        <div class="howWorkItemTexts">
+                            <p class="howWorkItemNum">01</p>
+                            <p class="howWorkItemTitle">Заявка</p>
+                            <p class="howWorkItemText">Вы <span>оставляете заявку</span> <br> на сайте или звоните нам <br> по номеру <a href="">8 (812) 670-07-25</a> </p>
+                        </div>
+                        <div class="howWorkItemBgBlock">
+                            <svg class="howWorkItemBgOrangeTr" viewBox="0 0 73 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M-6 20L53 79L-6 138" stroke="#FF8C42" stroke-width="27" stroke-linecap="square" />
+                            </svg>
+                            <svg class="howWorkItemBgShadow" viewBox="0 0 12 446" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.29"
+                                    d="M0 223C6.54545 347.387 6.9198 446 8.72727 446C10.5348 446 12 346.159 12 223C12 99.8405 10.5348 0 8.72727 0C6.9198 0 8.72727 100.294 0 223Z"
+                                    fill="#0D0D0D" />
+                            </svg>
+                            <svg class="howWorkItemBgWhiteTr" viewBox="0 0 34 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0L34 34L0 68V0Z" fill="#EEEEEE" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="howWorkItem">
+                        <div class="howWorkItemTexts">
+                            <p class="howWorkItemNum">02</p>
+                            <p class="howWorkItemTitle">Заявка</p>
+                            <p class="howWorkItemText">Вы <span>оставляете заявку</span> <br> на сайте или звоните нам <br> по номеру <a href="">8 (812) 670-07-25</a> </p>
+                        </div>
+                        <div class="howWorkItemBgBlock">
+                            <svg class="howWorkItemBgOrangeTr" viewBox="0 0 73 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M-6 20L53 79L-6 138" stroke="#FF8C42" stroke-width="27" stroke-linecap="square" />
+                            </svg>
+                            <svg class="howWorkItemBgShadow" viewBox="0 0 12 446" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.29"
+                                    d="M0 223C6.54545 347.387 6.9198 446 8.72727 446C10.5348 446 12 346.159 12 223C12 99.8405 10.5348 0 8.72727 0C6.9198 0 8.72727 100.294 0 223Z"
+                                    fill="#0D0D0D" />
+                            </svg>
+                            <svg class="howWorkItemBgWhiteTr" viewBox="0 0 34 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0L34 34L0 68V0Z" fill="#EEEEEE" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="howWorkItem">
+                        <div class="howWorkItemTexts">
+                            <p class="howWorkItemNum">03</p>
+                            <p class="howWorkItemTitle">Заявка</p>
+                            <p class="howWorkItemText">Вы <span>оставляете заявку</span> <br> на сайте или звоните нам <br> по номеру <a href="">8 (812) 670-07-25</a> </p>
+                        </div>
+                        <div class="howWorkItemBgBlock">
+                            <svg class="howWorkItemBgOrangeTr" viewBox="0 0 73 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M-6 20L53 79L-6 138" stroke="#FF8C42" stroke-width="27" stroke-linecap="square" />
+                            </svg>
+                            <svg class="howWorkItemBgShadow" viewBox="0 0 12 446" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.29"
+                                    d="M0 223C6.54545 347.387 6.9198 446 8.72727 446C10.5348 446 12 346.159 12 223C12 99.8405 10.5348 0 8.72727 0C6.9198 0 8.72727 100.294 0 223Z"
+                                    fill="#0D0D0D" />
+                            </svg>
+                            <svg class="howWorkItemBgWhiteTr" viewBox="0 0 34 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0L34 34L0 68V0Z" fill="#EEEEEE" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="howWorkItem">
+                        <div class="howWorkItemTexts">
+                            <p class="howWorkItemNum">04</p>
+                            <p class="howWorkItemTitle">Заявка</p>
+                            <p class="howWorkItemText">Вы <span>оставляете заявку</span> <br> на сайте или звоните нам <br> по номеру <a href="">8 (812) 670-07-25</a> </p>
+                        </div>
+                        <div class="howWorkItemBgBlock">
+                            <svg class="howWorkItemBgOrangeTr" viewBox="0 0 73 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M-6 20L53 79L-6 138" stroke="#FF8C42" stroke-width="27" stroke-linecap="square" />
+                            </svg>
+                            <svg class="howWorkItemBgShadow" viewBox="0 0 12 446" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.29"
+                                    d="M0 223C6.54545 347.387 6.9198 446 8.72727 446C10.5348 446 12 346.159 12 223C12 99.8405 10.5348 0 8.72727 0C6.9198 0 8.72727 100.294 0 223Z"
+                                    fill="#0D0D0D" />
+                            </svg>
+                            <svg class="howWorkItemBgWhiteTr" viewBox="0 0 34 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0L34 34L0 68V0Z" fill="#EEEEEE" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="howWorkItem">
+                        <div class="howWorkItemTexts">
+                            <p class="howWorkItemNum">05</p>
+                            <p class="howWorkItemTitle">Заявка</p>
+                            <p class="howWorkItemText">Вы <span>оставляете заявку</span> <br> на сайте или звоните нам <br> по номеру <a href="">8 (812) 670-07-25</a> </p>
+                        </div>
+                        <div class="howWorkItemBgBlock">
+                            <svg class="howWorkItemBgOrangeTr" viewBox="0 0 73 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M-6 20L53 79L-6 138" stroke="#FF8C42" stroke-width="27" stroke-linecap="square" />
+                            </svg>
+                            <svg class="howWorkItemBgShadow" viewBox="0 0 12 446" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.29"
+                                    d="M0 223C6.54545 347.387 6.9198 446 8.72727 446C10.5348 446 12 346.159 12 223C12 99.8405 10.5348 0 8.72727 0C6.9198 0 8.72727 100.294 0 223Z"
+                                    fill="#0D0D0D" />
+                            </svg>
+                            <svg class="howWorkItemBgShadowSecond" viewBox="0 0 12 446" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.29"
+                                    d="M0 223C6.54545 347.387 6.9198 446 8.72727 446C10.5348 446 12 346.159 12 223C12 99.8405 10.5348 0 8.72727 0C6.9198 0 8.72727 100.294 0 223Z"
+                                    fill="#0D0D0D" />
+                            </svg>
+                            <svg class="howWorkItemBgWhiteTr" viewBox="0 0 34 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0L34 34L0 68V0Z" fill="#EEEEEE" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="comfort">
+            <div class="container">
+                <div class="comfortItem first">
+                    <p class="comfortItemFirstHeading">Забота о вашем комфорте - наша главная задача</p>
+                </div>
+                <div class="comfortItem second">
+                    <p class="comfortItemHeading">Безопасность</p>
+                    <p class="comfortItemSubTitle">Все материалы пропитаны пожаростойким составом, используется скрытая разводка электрики, сантехники и канализации</p>
+                    <p class="comformItemNum">02</p>
+                </div>
+                <div class="comfortItem third">
+                    <p class="comfortItemHeading">Экологичные краски</p>
+                    <p class="comfortItemSubTitle">Используем экологически чистые краски без примесей из натуральных компонентов</p>
+                    <p class="comformItemNum">05</p>
+                </div>
+                <div class="comfortItem fourth">
+                    <p class="comfortItemHeading">Срок службы</p>
+                    <p class="comfortItemSubTitle">Конструкция из дерева 1-2 сорта создает прочный каркас, благодаря чему дом прослужит 20-30 лет</p>
+                    <p class="comformItemNum">01</p>
+                </div>
+                <div class="comfortItem fifth">
+                    <p class="comfortItemHeading">Теплоизоляция</p>
+                    <p class="comfortItemSubTitle">При отделке используется каменная вата Rockwool, это обеспечивает комфортную температуру круглый год</p>
+                    <p class="comformItemNum">03</p>
+                </div>
+                <div class="comfortItem sixth">
+                    <p class="comfortItemHeading">Защита от гниения</p>
+                    <p class="comfortItemSubTitle">В конструкции кровли предусмотрен вентзазор, который обеспечивает защиту от конденсата</p>
+                    <p class="comformItemNum">04</p>
+                </div>
+            </div>
+        </section>
+        <section class="rew">
+            <div class="container">
+                <p class="rewHeading">Ваши отзывы - наша гордость, <br> наши гарантии</p>
+                <div class="rewWraper">
+                    <div class="rewLeft">
+                        <div class="rewItem">
+                            <div class="rewItemTop">
+                                <img src="./media/rew/1.svg" alt="" class="rewItemTopImg">
+                                <p class="rewItemTopText">Гарантия на готовый дом составляет 10 лет, она закреплена в договоре</p>
+                            </div>
+                            <div class="rewItemBg">
+                                <svg class="rewItemBgSvg" viewBox="0 0 325 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1.39935 9.0693C-0.981702 5.06984 1.9003 0 6.55487 0H55.1845C57.2994 0 59.2581 1.11345 60.34 2.93069L178.218 200.931C180.599 204.93 177.717 210 173.063 210H124.433C122.318 210 120.359 208.887 119.277 207.069L1.39935 9.0693Z"
+                                        fill="#FF8C42" />
+                                    <path
+                                        d="M74.0906 9.0693C71.7096 5.06984 74.5916 0 79.2461 0H127.876C129.991 0 131.949 1.11345 133.031 2.93069L250.909 200.931C253.29 204.93 250.408 210 245.754 210H197.124C195.009 210 193.051 208.887 191.969 207.069L74.0906 9.0693Z"
+                                        fill="#FF8C42" />
+                                    <path
+                                        d="M146.782 9.0693C144.401 5.06984 147.283 0 151.937 0H200.567C202.682 0 204.641 1.11345 205.723 2.93069L323.601 200.931C325.982 204.93 323.1 210 318.445 210H269.815C267.701 210 265.742 208.887 264.66 207.069L146.782 9.0693Z"
+                                        fill="#FF8C42" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="rewItem">
+                            <div class="rewItemTop">
+                                <img src="./media/rew/1.svg" alt="" class="rewItemTopImg">
+                                <p class="rewItemTopText">Гарантия на готовый дом составляет 10 лет, она закреплена в договоре</p>
+                            </div>
+                            <div class="rewItemBg">
+                                <svg class="rewItemBgSvg" viewBox="0 0 325 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1.39935 9.0693C-0.981702 5.06984 1.9003 0 6.55487 0H55.1845C57.2994 0 59.2581 1.11345 60.34 2.93069L178.218 200.931C180.599 204.93 177.717 210 173.063 210H124.433C122.318 210 120.359 208.887 119.277 207.069L1.39935 9.0693Z"
+                                        fill="#FF8C42" />
+                                    <path
+                                        d="M74.0906 9.0693C71.7096 5.06984 74.5916 0 79.2461 0H127.876C129.991 0 131.949 1.11345 133.031 2.93069L250.909 200.931C253.29 204.93 250.408 210 245.754 210H197.124C195.009 210 193.051 208.887 191.969 207.069L74.0906 9.0693Z"
+                                        fill="#FF8C42" />
+                                    <path
+                                        d="M146.782 9.0693C144.401 5.06984 147.283 0 151.937 0H200.567C202.682 0 204.641 1.11345 205.723 2.93069L323.601 200.931C325.982 204.93 323.1 210 318.445 210H269.815C267.701 210 265.742 208.887 264.66 207.069L146.782 9.0693Z"
+                                        fill="#FF8C42" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="rewItem">
+                            <div class="rewItemTop">
+                                <img src="./media/rew/1.svg" alt="" class="rewItemTopImg">
+                                <p class="rewItemTopText">Гарантия на готовый дом составляет 10 лет, она закреплена в договоре</p>
+                            </div>
+                            <div class="rewItemBg">
+                                <svg class="rewItemBgSvg" viewBox="0 0 325 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1.39935 9.0693C-0.981702 5.06984 1.9003 0 6.55487 0H55.1845C57.2994 0 59.2581 1.11345 60.34 2.93069L178.218 200.931C180.599 204.93 177.717 210 173.063 210H124.433C122.318 210 120.359 208.887 119.277 207.069L1.39935 9.0693Z"
+                                        fill="#FF8C42" />
+                                    <path
+                                        d="M74.0906 9.0693C71.7096 5.06984 74.5916 0 79.2461 0H127.876C129.991 0 131.949 1.11345 133.031 2.93069L250.909 200.931C253.29 204.93 250.408 210 245.754 210H197.124C195.009 210 193.051 208.887 191.969 207.069L74.0906 9.0693Z"
+                                        fill="#FF8C42" />
+                                    <path
+                                        d="M146.782 9.0693C144.401 5.06984 147.283 0 151.937 0H200.567C202.682 0 204.641 1.11345 205.723 2.93069L323.601 200.931C325.982 204.93 323.1 210 318.445 210H269.815C267.701 210 265.742 208.887 264.66 207.069L146.782 9.0693Z"
+                                        fill="#FF8C42" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="rewItem formRew">
+                            <div class="aboutUsForm">
+                                <p class="aboutUsFormHeading">Оставьте заявку на строительство уникального модульного дома!</p>
+                                <div class="aboutUsFormWraper">
+                                    <div class="aboutUsFormTop">
+                                        <div class="aboutUsFormInputs">
+                                            <div class="inputItem">
+                                                <label for="aboutName1" class="aboutUsFormLabel">Укажите ваше ФИО</label>
+                                                <input type="text" class="aboutIsFormlabelInput" placeholder="Иванов Иван Иванович" id="aboutName1">
+                                            </div>
+                                            <div class="inputItem">
+                                                <label for="aboutPhone1" class="aboutUsFormLabel">Укажите ваш номер телефона</label>
+                                                <input type="text" class="aboutIsFormlabelInput" placeholder="+7 (    ) ___ __-__ " id="aboutPhone1">
+                                            </div>
+                                        </div>
+                                        <div class="aboutUsFormSend">
+                                            <button class="aboutUsFormSendBtn">Отправить заявку</button>
+                                        </div>
+                                    </div>
+                                    <p class="aboutUsFormBtn">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования Платформой</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rewRight">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="docs">
+            <div class="container">
+                <h3 class="docsHeading">Документация</h3>
+                <div class="docsWraper">
+                    <div class="docsLeft">
+                        <img src="./media/docs/1.png" alt="" class="docsLeftImg">
+                        <img src="./media/docs/1.png" alt="" class="docsLeftImg">
+                        <img src="./media/docs/1.png" alt="" class="docsLeftImg">
+                        <img src="./media/docs/1.png" alt="" class="docsLeftImg">
+                        <img src="./media/docs/1.png" alt="" class="docsLeftImg">
+                        <img src="./media/docs/1.png" alt="" class="docsLeftImg">
+                    </div>
+                    <svg class="docsRight" viewBox="0 0 612 589" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M588.731 580.053H358.687C350.329 580.053 343.451 573.347 344.503 565.178C351.55 510.45 397.644 463.25 476.883 456.402C477.782 456.325 478.712 456.331 479.61 456.426C549.3 463.743 595.247 513.716 602.773 565.194C603.965 573.345 597.09 580.053 588.731 580.053Z"
+                            fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M476.089 447.49C477.561 447.363 479.079 447.372 480.573 447.529C554.304 455.271 603.63 508.305 611.761 563.918C613.867 578.324 601.699 589 588.731 589H358.687C345.672 589 333.656 578.33 335.494 564.052C343.156 504.548 393.236 454.65 476.089 447.49ZM478.648 465.322C478.346 465.29 478.004 465.287 477.676 465.315C402.052 471.85 359.943 516.352 353.511 566.304C353.355 567.512 353.741 568.586 354.612 569.478C355.531 570.42 356.976 571.106 358.687 571.106H588.731C590.447 571.106 591.878 570.417 592.768 569.499C593.602 568.64 593.954 567.626 593.785 566.47C586.864 519.127 544.297 472.215 478.648 465.322Z"
+                            fill="#0D0D0D" />
+                        <path
+                            d="M9.08068 122.273V23.8582C9.08068 15.6229 15.8566 8.94684 24.2151 8.94684H124.103H417.711H523.652C532.011 8.94684 538.787 15.6229 538.787 23.8582V122.273V392.17C538.787 400.405 532.011 407.081 523.652 407.081H24.2151C15.8566 407.081 9.08068 400.405 9.08068 392.17V122.273Z"
+                            fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M24.2151 17.8937C20.8717 17.8937 18.1614 20.5641 18.1614 23.8582V112.968C68.7123 108.962 110.49 71.6745 114.677 17.8937H24.2151ZM132.887 17.8937C128.59 82.1636 78.2002 126.802 18.1614 130.911V392.17C18.1614 395.464 20.8717 398.134 24.2151 398.134H523.652C526.996 398.134 529.706 395.464 529.706 392.17V130.995C494.657 129.238 464.998 117.269 443.697 97.1616C422.53 77.1803 410.218 49.7198 408.755 17.8937H132.887ZM426.937 17.8937C428.372 45.1848 438.944 67.8932 456.261 84.2412C473.768 100.767 498.767 111.348 529.706 113.076V23.8582C529.706 20.5641 526.996 17.8937 523.652 17.8937H426.937ZM0 23.8582C0 10.6817 10.8415 0 24.2151 0H523.652C537.026 0 547.867 10.6817 547.867 23.8582V392.17C547.867 405.346 537.026 416.028 523.652 416.028H24.2151C10.8415 416.028 0 405.346 0 392.17V23.8582Z"
+                            fill="#0D0D0D" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M119.562 161.043C119.562 154.455 124.983 149.114 131.67 149.114H416.198C422.884 149.114 428.305 154.455 428.305 161.043C428.305 167.631 422.884 172.972 416.198 172.972H131.67C124.983 172.972 119.562 167.631 119.562 161.043Z"
+                            fill="#0D0D0D" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M210.369 231.127C210.369 224.538 215.79 219.197 222.477 219.197H328.418C335.105 219.197 340.525 224.538 340.525 231.127C340.525 237.715 335.105 243.056 328.418 243.056H222.477C215.79 243.056 210.369 237.715 210.369 231.127Z"
+                            fill="#FF8C42" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M177.073 90.9595C177.073 84.3712 182.494 79.0304 189.181 79.0304L364.741 79.0304C371.427 79.0304 376.848 84.3712 376.848 90.9595C376.848 97.5478 371.427 102.889 364.741 102.889L189.181 102.889C182.494 102.889 177.073 97.5478 177.073 90.9595Z"
+                            fill="#FF8C42" />
+                        <path
+                            d="M83.2395 478.912V378.782C83.2395 376.319 86.1262 374.919 88.1698 376.338C122.925 400.478 145.493 396.209 183.1 375.355C185.132 374.228 187.667 375.66 187.667 377.957V477.42C187.667 480.077 184.407 481.408 182.5 479.529L138.35 436.03C137.168 434.866 135.252 434.866 134.07 436.03L88.4068 481.02C86.4999 482.899 83.2395 481.568 83.2395 478.912Z"
+                            fill="#EEEEEE" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M178.646 367.558C186.6 363.148 196.748 368.668 196.748 377.957V477.42C196.748 488.048 183.706 493.371 176.079 485.856L136.21 446.574L94.8278 487.347C87.2004 494.862 74.1589 489.539 74.1589 478.912V378.782C74.1589 368.67 85.6741 363.658 93.4019 369.026C109.796 380.412 122.161 384.318 134.154 383.782C146.579 383.226 160.04 377.876 178.646 367.558ZM178.587 387.95C163.213 395.835 149.209 401.021 134.977 401.657C120.61 402.299 106.984 398.29 92.3202 389.678V464.512L127.649 429.704C132.377 425.045 140.043 425.045 144.771 429.704L178.587 463.021V387.95Z"
+                            fill="#FF8C42" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M134.697 380.241C164.787 380.241 189.181 356.207 189.181 326.56C189.181 296.912 164.787 272.879 134.697 272.879C104.606 272.879 80.2126 296.912 80.2126 326.56C80.2126 342.456 87.1907 356.71 98.3807 366.578C108.038 375.094 120.725 380.241 134.697 380.241ZM134.697 407.081C179.833 407.081 216.423 371.03 216.423 326.56C216.423 282.089 179.833 246.038 134.697 246.038C89.5606 246.038 52.9706 282.089 52.9706 326.56C52.9706 350.407 63.4929 371.834 80.2126 386.578C94.6715 399.328 113.765 407.081 134.697 407.081Z"
+                            fill="black" />
+                        <path
+                            d="M570.569 380.241C570.569 432.947 527.203 475.673 473.709 475.673C420.214 475.673 376.848 432.947 376.848 380.241C376.848 327.534 420.214 284.808 473.709 284.808C527.203 284.808 570.569 327.534 570.569 380.241Z"
+                            fill="#EEEEEE" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M473.709 448.833C512.158 448.833 543.327 418.123 543.327 380.241C543.327 342.358 512.158 311.648 473.709 311.648C435.259 311.648 404.09 342.358 404.09 380.241C404.09 418.123 435.259 448.833 473.709 448.833ZM473.709 475.673C527.203 475.673 570.569 432.947 570.569 380.241C570.569 327.534 527.203 284.808 473.709 284.808C420.214 284.808 376.848 327.534 376.848 380.241C376.848 432.947 420.214 475.673 473.709 475.673Z"
+                            fill="black" />
+                        <path
+                            d="M473.709 262.441C519.112 263.186 570.569 307.175 570.569 357.873H376.848C376.848 310.157 425.278 262.441 473.709 262.441Z"
+                            fill="#EEEEEE" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M464.628 272.013V290.772C464.628 295.713 468.694 299.719 473.709 299.719C478.724 299.719 482.789 295.713 482.789 290.772V272.192C500.132 274.889 518.264 284.143 532.897 297.898C547.793 311.9 558.324 329.865 560.885 348.927H386.564C389.096 330.869 399.047 312.867 413.538 298.59C428.029 284.313 446.3 274.508 464.628 272.013ZM368.263 348.927C370.861 325.37 383.434 302.944 400.696 285.937C417.958 268.93 440.719 256.541 464.628 253.982V235.6H482.789V254.121C505.356 256.892 527.924 268.492 545.434 284.951C563.194 301.647 576.541 324.095 579.175 348.927H591.757C596.773 348.927 600.838 352.932 600.838 357.873C600.838 362.815 596.773 366.82 591.757 366.82H355.66C350.645 366.82 346.579 362.815 346.579 357.873C346.579 352.932 350.645 348.927 355.66 348.927H368.263Z"
+                            fill="#FF8C42" />
+                    </svg>
+                </div>
+            </div>
+            <div class="docsBg">
+                <svg class="docsBgSvg" viewBox="0 0 433 911" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M-182.934 980.111C-186.934 982.489 -192 979.606 -192 974.954L-192 802.914C-192 800.797 -190.885 798.837 -189.066 797.756L423.934 433.389C427.934 431.011 433 433.894 433 438.546L433 610.586C433 612.703 431.885 614.663 430.066 615.744L-182.934 980.111Z"
+                        fill="#FF8C42" />
+                    <path
+                        d="M-182.934 764.111C-186.934 766.489 -192 763.606 -192 758.954L-192 586.914C-192 584.797 -190.885 582.837 -189.066 581.756L423.934 217.389C427.934 215.011 433 217.894 433 222.546L433 394.586C433 396.703 431.885 398.663 430.066 399.744L-182.934 764.111Z"
+                        fill="#FF8C42" />
+                    <path
+                        d="M-182.934 548.111C-186.934 550.489 -192 547.606 -192 542.954L-192 370.914C-192 368.797 -190.885 366.837 -189.066 365.756L423.934 1.38864C427.934 -0.988675 433 1.89359 433 6.5463L433 178.586C433 180.703 431.885 182.663 430.066 183.744L-182.934 548.111Z"
+                        fill="#FF8C42" />
+                </svg>
+            </div>
+        </section>
+        <section class="contacts">
+            <div class="container">
+                <h3 class="contactsHeading">Обратная связь</h3>
+                <p class="contactSubHeading">Остались вопросы? Не знаете какой дом вам нужен? ОСтавьте заявку и наши менеджеры свяжутся с вами в течение 15 минут</p>
+                <div class="contactsWraper">
+                    <div class="contactsLeft">
+                        <p class="contactsLeftHeading">Контакты</p>
+                        <div class="contactsLeftList">
+                            <div class="contactsLeftItem">
+                                <p class="contactsLeftItemHeading">e-mail</p>
+                                <p class="contactsLeftItemText">info@scandimodule.com</p>
+                            </div>
+                            <div class="contactsLeftItem">
+                                <p class="contactsLeftItemHeading">Телефон</p>
+                                <p class="contactsLeftItemText">+7 911 777-77-77</p>
+                            </div>
+                            <div class="contactsLeftItem">
+                                <p class="contactsLeftItemHeading">Адрес</p>
+                                <p class="contactsLeftItemText">Россия, 187046, Ленинградская обл., м. р-н Тосненский, г.п. Федоровское, д. Аннолово, проезд 1-й Индустриальный, д.3, к.5</p>
+                            </div>
+                        </div>
+                        <div class="headerSeti">
+                            <a href="" class="headerSetiHref">
+                                <svg class="headerSetiHrefSvg" viewBox="0 0 34 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M30.0281 0.383275C30.44 0.209927 30.8908 0.15014 31.3336 0.210137C31.7764 0.270134 32.1951 0.447722 32.546 0.724417C32.8969 1.00111 33.1672 1.3668 33.3288 1.78341C33.4904 2.20003 33.5373 2.65234 33.4648 3.09328L29.6848 26.0216C29.3181 28.2333 26.8915 29.5016 24.8631 28.3999C23.1665 27.4783 20.6465 26.0583 18.3798 24.5766C17.2465 23.8349 13.7748 21.4599 14.2015 19.7699C14.5681 18.3249 20.4015 12.8949 23.7348 9.66661C25.0431 8.39828 24.4465 7.66661 22.9015 8.83328C19.0648 11.7299 12.9048 16.1349 10.8681 17.3749C9.07148 18.4683 8.13481 18.6549 7.01481 18.4683C4.97148 18.1283 3.07648 17.6016 1.52981 16.9599C-0.560187 16.0933 -0.45852 13.2199 1.52815 12.3833L30.0281 0.383275Z"
+                                        fill="#FF8C42" />
+                                </svg>
+                            </a>
+                            <a href="" class="headerSetiHref">
+                                <svg class="headerSetiHrefSvg"  viewBox="0 0 42 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M40.9779 1.69531C41.2659 0.71875 40.9779 0 39.5923 0H35.0071C33.8395 0 33.3023 0.617187 33.0143 1.30469C33.0143 1.30469 30.6789 7.01562 27.3783 10.7187C26.3118 11.7891 25.8214 12.1328 25.2375 12.1328C24.9495 12.1328 24.5058 11.7891 24.5058 10.8125V1.69531C24.5058 0.523437 24.1788 0 23.2135 0H16.005C15.2733 0 14.8374 0.546875 14.8374 1.05469C14.8374 2.16406 16.4877 2.42188 16.6589 5.54688V12.3281C16.6589 13.8125 16.3943 14.0859 15.8104 14.0859C14.2535 14.0859 10.4702 8.35156 8.22828 1.78906C7.77677 0.515625 7.33305 0 6.15758 0H1.57248C0.264675 0 0 0.617187 0 1.30469C0 2.52344 1.55691 8.57813 7.24742 16.5781C11.0385 22.0391 16.3787 25 21.2363 25C24.1555 25 24.5136 24.3438 24.5136 23.2109C24.5136 17.9922 24.2489 17.5 25.7124 17.5C26.3896 17.5 27.5573 17.8438 30.2819 20.4766C33.3957 23.6016 33.9095 25 35.6533 25H40.2384C41.5462 25 42.2079 24.3438 41.8264 23.0469C40.9546 20.3203 35.0616 14.7109 34.797 14.3359C34.1197 13.4609 34.3143 13.0703 34.797 12.2891C34.8047 12.2813 40.4018 4.375 40.9779 1.69531Z"
+                                        fill="#A6A6A6" />
+                                </svg>
+                            </a>
+                            <a href="" class="headerSetiHref">
+                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18.8556 0C20.7306 0.005 21.6822 0.015 22.5039 0.0383333L22.8272 0.05C23.2006 0.0633333 23.5689 0.0799999 24.0139 0.0999999C25.7872 0.183333 26.9972 0.463334 28.0589 0.875C29.1589 1.29833 30.0856 1.87167 31.0122 2.79667C31.8597 3.62983 32.5155 4.63765 32.9339 5.75C33.3456 6.81167 33.6256 8.02167 33.7089 9.79667C33.7289 10.24 33.7456 10.6083 33.7589 10.9833L33.7689 11.3067C33.7939 12.1267 33.8039 13.0783 33.8072 14.9533L33.8089 16.1967V18.38C33.813 19.5957 33.8002 20.8113 33.7706 22.0267L33.7606 22.35C33.7472 22.725 33.7306 23.0933 33.7106 23.5367C33.6272 25.3117 33.3439 26.52 32.9339 27.5833C32.5167 28.6963 31.8608 29.7044 31.0122 30.5367C30.1788 31.3839 29.1711 32.0396 28.0589 32.4583C26.9972 32.87 25.7872 33.15 24.0139 33.2333C23.6184 33.252 23.2229 33.2686 22.8272 33.2833L22.5039 33.2933C21.6822 33.3167 20.7306 33.3283 18.8556 33.3317L17.6122 33.3333H15.4306C14.2143 33.3375 12.9981 33.3248 11.7822 33.295L11.4589 33.285C11.0633 33.27 10.6677 33.2528 10.2722 33.2333C8.4989 33.15 7.2889 32.87 6.22557 32.4583C5.11335 32.0406 4.10593 31.3847 3.2739 30.5367C2.42565 29.7038 1.76928 28.6959 1.35057 27.5833C0.938905 26.5217 0.658904 25.3117 0.575571 23.5367C0.557002 23.1412 0.540335 22.7456 0.525571 22.35L0.517238 22.0267C0.486525 20.8114 0.472634 19.5957 0.475571 18.38V14.9533C0.470919 13.7377 0.483143 12.522 0.512238 11.3067L0.523904 10.9833C0.537238 10.6083 0.553904 10.24 0.573904 9.79667C0.657238 8.02167 0.937238 6.81333 1.3489 5.75C1.76743 4.63651 2.42511 3.62837 3.27557 2.79667C4.10739 1.94912 5.11414 1.29331 6.22557 0.875C7.2889 0.463334 8.49724 0.183333 10.2722 0.0999999C10.7156 0.0799999 11.0856 0.0633333 11.4589 0.05L11.7822 0.0399999C12.9976 0.0103878 14.2132 -0.00239116 15.4289 0.00166655L18.8556 0ZM17.1422 8.33333C14.9321 8.33333 12.8125 9.21131 11.2497 10.7741C9.68688 12.3369 8.8089 14.4565 8.8089 16.6667C8.8089 18.8768 9.68688 20.9964 11.2497 22.5592C12.8125 24.122 14.9321 25 17.1422 25C19.3524 25 21.472 24.122 23.0348 22.5592C24.5976 20.9964 25.4756 18.8768 25.4756 16.6667C25.4756 14.4565 24.5976 12.3369 23.0348 10.7741C21.472 9.21131 19.3524 8.33333 17.1422 8.33333ZM17.1422 11.6667C17.7988 11.6666 18.449 11.7958 19.0557 12.047C19.6624 12.2981 20.2136 12.6663 20.678 13.1305C21.1424 13.5948 21.5108 14.1459 21.7622 14.7525C22.0135 15.3591 22.143 16.0092 22.1431 16.6658C22.1432 17.3224 22.014 17.9726 21.7628 18.5793C21.5116 19.186 21.1434 19.7372 20.6792 20.2016C20.215 20.666 19.6638 21.0344 19.0573 21.2857C18.4507 21.5371 17.8005 21.6666 17.1439 21.6667C15.8178 21.6667 14.5461 21.1399 13.6084 20.2022C12.6707 19.2645 12.1439 17.9927 12.1439 16.6667C12.1439 15.3406 12.6707 14.0688 13.6084 13.1311C14.5461 12.1935 15.8178 11.6667 17.1439 11.6667M25.8939 5.83333C25.3414 5.83333 24.8115 6.05283 24.4208 6.44353C24.0301 6.83423 23.8106 7.36413 23.8106 7.91667C23.8106 8.4692 24.0301 8.99911 24.4208 9.38981C24.8115 9.78051 25.3414 10 25.8939 10C26.4464 10 26.9763 9.78051 27.367 9.38981C27.7577 8.99911 27.9772 8.4692 27.9772 7.91667C27.9772 7.36413 27.7577 6.83423 27.367 6.44353C26.9763 6.05283 26.4464 5.83333 25.8939 5.83333Z"
+                                        fill="#A6A6A6" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contactsRight">
+                        <label class="contactsFormLabel">
+                            <p class="contactsLabelText">Введите ваше полное имя</p>
+                            <input type="text" class="contactsFormInput" placeholder="Иванов Иван Иванович">
+                        </label>
+                        <label class="contactsFormLabel">
+                            <p class="contactsLabelText">Введите ваш номер телефона</p>
+                            <input type="text" class="contactsFormInput" placeholder="+7 (___) ___ __-__">
+                        </label>
+                        <div class="contactsFormButtonWraper">
+                            <label class="contactsFormLabel">
+                                <p class="contactsLabelText">Введите ваш номер телефона или почту</p>
+                                <textarea type="text" class="contactsFormInput textArea" placeholder="Подскажите, как скоро вы сможете построить дом 24 кв.м?"></textarea>
+                            </label>
+                            <button class="contactsFormBtnSend">Отправить </button>
+                        </div>
+                        <p class="contactsFormPolicy">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования Платформой</p>
+                    </div>
+                </div>
+            </div>
+            <img src="./media/contacts/1.png" alt="" class="contactsBg">
+        </section>
+
+        
+
+        <!-- <div class="tehRabots">
+            <div class="container">
+                <p class="tehHeading">К сожалению, на сайте ведутся технические работы, но вы можете оставить заявку на строительство дома и вам перезвонит наш менеджер в течение 30 минут!</p>
+                <img src="./media/teh/bg.svg" alt="" class="tehImg">
+                <div class="tehForm">
+                    <div class="tehFormWraper">
+                        <label class="tehFormLabel">
+                            <p class="tehLabelHeading">Укажите ваше ФИО</p>
+                            <input type="text" class="tehLabelInput" placeholder="Иванов Иван Иванович">
+                        </label>
+                        <label class="tehFormLabel">
+                            <p class="tehLabelHeading">Укажите ваш номер телефона</p>
+                            <input id=" " type="text" class="tehLabelInput" placeholder="+7 (    ) ___ __-__ ">
+                        </label>
+                    </div>
+                    <button class="sendTehForm">Отправить заявку</button>
+                </div>
+            </div>
+            <img src="./media/teh/bgOrange.svg" alt="" class="tehBg">
+        </div> -->
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footerWraper">
+                <div class="footerItem">
+                    <img src="./media/icons/logo.svg" alt="" class="footerLogo">
+                    <p class="footerCompanyInfoText">ООО «СКАНДИ МОДУЛЬ»</p>
+                    <p class="footerCompanyInfoText">ИНН 4705107293 <br>
+                        ОГРН 1234700037802</p>
+                </div>
+                <div class="footerItem">
+                    <p class="footerItemName">Навигация по сайту</p>
+                    <div class="footerItemNaw">
+                        <p class="footerItemNawItem">Главная</p>
+                        <p class="footerItemNawItem">Акции</p>
+                        <p class="footerItemNawItem">О компании</p>
+                        <p class="footerItemNawItem">Преимущества</p>
+                        <p class="footerItemNawItem">Проекты</p>
+                        <p class="footerItemNawItem">Калькулятор ипотеки</p>
+                        <p class="footerItemNawItem">Производство</p>
+                        <p class="footerItemNawItem">Этапы работ</p>
+                        <p class="footerItemNawItem">Мастера</p>
+                        <p class="footerItemNawItem">Гарантии</p>
+                        <p class="footerItemNawItem">Документация</p>
+                        <p class="footerItemNawItem">Контакты</p>
+                    </div>
+                </div>
+                <div class="footerItem">
+                    <p class="footerItemName">Адрес</p>
+                    <p class="footerAdres">Россия, 187046, Ленинградская обл., м. р-н Тосненский, г.п. Федоровское, д. Аннолово, проезд 1-й Индустриальный, д.3, к.5</p>
+                </div>
+                <div class="footerItem">
+                    <p class="footerItemName">Контакты</p>
+                    <div class="footerContactsItem">
+                        <p class="footerContactsItemName">e-mail</p>
+                        <p class="footerContactsItemText">info@scandimodule.com</p>
+                    </div>
+                    <div class="footerContactsItem">
+                        <p class="footerContactsItemName">Телефон</p>
+                        <p class="footerContactsItemText">+7 911 777-77-77</p>
+                    </div>
+                    <div class="footerSeti">
+                        <p class="footerSetiHeading">Мы в соц. сетях</p>
+                        <div class="headerSeti">
+                            <a href="" class="headerSetiHref">
+                                <svg class="headerSetiHrefSvg" viewBox="0 0 34 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M30.0281 0.383275C30.44 0.209927 30.8908 0.15014 31.3336 0.210137C31.7764 0.270134 32.1951 0.447722 32.546 0.724417C32.8969 1.00111 33.1672 1.3668 33.3288 1.78341C33.4904 2.20003 33.5373 2.65234 33.4648 3.09328L29.6848 26.0216C29.3181 28.2333 26.8915 29.5016 24.8631 28.3999C23.1665 27.4783 20.6465 26.0583 18.3798 24.5766C17.2465 23.8349 13.7748 21.4599 14.2015 19.7699C14.5681 18.3249 20.4015 12.8949 23.7348 9.66661C25.0431 8.39828 24.4465 7.66661 22.9015 8.83328C19.0648 11.7299 12.9048 16.1349 10.8681 17.3749C9.07148 18.4683 8.13481 18.6549 7.01481 18.4683C4.97148 18.1283 3.07648 17.6016 1.52981 16.9599C-0.560187 16.0933 -0.45852 13.2199 1.52815 12.3833L30.0281 0.383275Z"
+                                        fill="#FF8C42" />
+                                </svg>
+                            </a>
+                            <a href="" class="headerSetiHref">
+                                <svg class="headerSetiHrefSvg"  viewBox="0 0 42 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M40.9779 1.69531C41.2659 0.71875 40.9779 0 39.5923 0H35.0071C33.8395 0 33.3023 0.617187 33.0143 1.30469C33.0143 1.30469 30.6789 7.01562 27.3783 10.7187C26.3118 11.7891 25.8214 12.1328 25.2375 12.1328C24.9495 12.1328 24.5058 11.7891 24.5058 10.8125V1.69531C24.5058 0.523437 24.1788 0 23.2135 0H16.005C15.2733 0 14.8374 0.546875 14.8374 1.05469C14.8374 2.16406 16.4877 2.42188 16.6589 5.54688V12.3281C16.6589 13.8125 16.3943 14.0859 15.8104 14.0859C14.2535 14.0859 10.4702 8.35156 8.22828 1.78906C7.77677 0.515625 7.33305 0 6.15758 0H1.57248C0.264675 0 0 0.617187 0 1.30469C0 2.52344 1.55691 8.57813 7.24742 16.5781C11.0385 22.0391 16.3787 25 21.2363 25C24.1555 25 24.5136 24.3438 24.5136 23.2109C24.5136 17.9922 24.2489 17.5 25.7124 17.5C26.3896 17.5 27.5573 17.8438 30.2819 20.4766C33.3957 23.6016 33.9095 25 35.6533 25H40.2384C41.5462 25 42.2079 24.3438 41.8264 23.0469C40.9546 20.3203 35.0616 14.7109 34.797 14.3359C34.1197 13.4609 34.3143 13.0703 34.797 12.2891C34.8047 12.2813 40.4018 4.375 40.9779 1.69531Z"
+                                        fill="#A6A6A6" />
+                                </svg>
+                            </a>
+                            <a href="" class="headerSetiHref">
+                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18.8556 0C20.7306 0.005 21.6822 0.015 22.5039 0.0383333L22.8272 0.05C23.2006 0.0633333 23.5689 0.0799999 24.0139 0.0999999C25.7872 0.183333 26.9972 0.463334 28.0589 0.875C29.1589 1.29833 30.0856 1.87167 31.0122 2.79667C31.8597 3.62983 32.5155 4.63765 32.9339 5.75C33.3456 6.81167 33.6256 8.02167 33.7089 9.79667C33.7289 10.24 33.7456 10.6083 33.7589 10.9833L33.7689 11.3067C33.7939 12.1267 33.8039 13.0783 33.8072 14.9533L33.8089 16.1967V18.38C33.813 19.5957 33.8002 20.8113 33.7706 22.0267L33.7606 22.35C33.7472 22.725 33.7306 23.0933 33.7106 23.5367C33.6272 25.3117 33.3439 26.52 32.9339 27.5833C32.5167 28.6963 31.8608 29.7044 31.0122 30.5367C30.1788 31.3839 29.1711 32.0396 28.0589 32.4583C26.9972 32.87 25.7872 33.15 24.0139 33.2333C23.6184 33.252 23.2229 33.2686 22.8272 33.2833L22.5039 33.2933C21.6822 33.3167 20.7306 33.3283 18.8556 33.3317L17.6122 33.3333H15.4306C14.2143 33.3375 12.9981 33.3248 11.7822 33.295L11.4589 33.285C11.0633 33.27 10.6677 33.2528 10.2722 33.2333C8.4989 33.15 7.2889 32.87 6.22557 32.4583C5.11335 32.0406 4.10593 31.3847 3.2739 30.5367C2.42565 29.7038 1.76928 28.6959 1.35057 27.5833C0.938905 26.5217 0.658904 25.3117 0.575571 23.5367C0.557002 23.1412 0.540335 22.7456 0.525571 22.35L0.517238 22.0267C0.486525 20.8114 0.472634 19.5957 0.475571 18.38V14.9533C0.470919 13.7377 0.483143 12.522 0.512238 11.3067L0.523904 10.9833C0.537238 10.6083 0.553904 10.24 0.573904 9.79667C0.657238 8.02167 0.937238 6.81333 1.3489 5.75C1.76743 4.63651 2.42511 3.62837 3.27557 2.79667C4.10739 1.94912 5.11414 1.29331 6.22557 0.875C7.2889 0.463334 8.49724 0.183333 10.2722 0.0999999C10.7156 0.0799999 11.0856 0.0633333 11.4589 0.05L11.7822 0.0399999C12.9976 0.0103878 14.2132 -0.00239116 15.4289 0.00166655L18.8556 0ZM17.1422 8.33333C14.9321 8.33333 12.8125 9.21131 11.2497 10.7741C9.68688 12.3369 8.8089 14.4565 8.8089 16.6667C8.8089 18.8768 9.68688 20.9964 11.2497 22.5592C12.8125 24.122 14.9321 25 17.1422 25C19.3524 25 21.472 24.122 23.0348 22.5592C24.5976 20.9964 25.4756 18.8768 25.4756 16.6667C25.4756 14.4565 24.5976 12.3369 23.0348 10.7741C21.472 9.21131 19.3524 8.33333 17.1422 8.33333ZM17.1422 11.6667C17.7988 11.6666 18.449 11.7958 19.0557 12.047C19.6624 12.2981 20.2136 12.6663 20.678 13.1305C21.1424 13.5948 21.5108 14.1459 21.7622 14.7525C22.0135 15.3591 22.143 16.0092 22.1431 16.6658C22.1432 17.3224 22.014 17.9726 21.7628 18.5793C21.5116 19.186 21.1434 19.7372 20.6792 20.2016C20.215 20.666 19.6638 21.0344 19.0573 21.2857C18.4507 21.5371 17.8005 21.6666 17.1439 21.6667C15.8178 21.6667 14.5461 21.1399 13.6084 20.2022C12.6707 19.2645 12.1439 17.9927 12.1439 16.6667C12.1439 15.3406 12.6707 14.0688 13.6084 13.1311C14.5461 12.1935 15.8178 11.6667 17.1439 11.6667M25.8939 5.83333C25.3414 5.83333 24.8115 6.05283 24.4208 6.44353C24.0301 6.83423 23.8106 7.36413 23.8106 7.91667C23.8106 8.4692 24.0301 8.99911 24.4208 9.38981C24.8115 9.78051 25.3414 10 25.8939 10C26.4464 10 26.9763 9.78051 27.367 9.38981C27.7577 8.99911 27.9772 8.4692 27.9772 7.91667C27.9772 7.36413 27.7577 6.83423 27.367 6.44353C26.9763 6.05283 26.4464 5.83333 25.8939 5.83333Z"
+                                        fill="#A6A6A6" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footerBtm">
+                <a href="" class="footerPolityc">Политика обработки персональных данных</a>
+                <p class="footerCopyr">Copyright © 2024 ScandiModule</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
     
 </body>
+
 </html>
